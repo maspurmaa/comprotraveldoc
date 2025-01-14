@@ -1,19 +1,21 @@
+import aerial from "../assets/aerial.jpg";
+import TitleBanner from "./block/TitleBanner";
+
 export default function Banner() {
   return (
-    <div className="relative">
-      <img
-        className="h-screen w-screen object-cover"
-        src="https://picsum.photos/id/1015/1280/720"
-        alt="banner"
-      />
-      <div className="absolute inset-0 bg-black/50 ">
-        <div className="p-40 text-white">
-          <h1 className="text-5xl font-bold">Lorem ipsum dolor sit amet.</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi optio
-            eius exercitationem, sint molestias cumque.
-          </p>
-        </div>
+    <div className="absolute h-screen w-screen">
+      <div className="relative">
+        <img
+          className="h-screen w-screen object-cover"
+          src={aerial}
+          alt="banner"
+        />
+        <div className="absolute vmax-h-screen top-0 left-0 w-full h-full  bg-black/30 z-1" />
+      </div>
+
+      {/* Title Banner */}
+      <div className="absolute inset-0 flex justify-center items-center z-10">
+        <TitleBanner />
       </div>
     </div>
   );
