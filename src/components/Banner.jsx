@@ -1,20 +1,22 @@
-import aerial from "../assets/aerial.jpg";
+import videoBG from "../assets/videoBG.mov";
 import TitleBanner from "./block/TitleBanner";
 
 export default function Banner() {
   return (
-    <div className="absolute h-screen w-screen">
-      <div className="relative">
-        <img
+    <div className=" h-screen w-screen -z-10 ">
+      <div>
+        <video
           className="h-screen w-screen object-cover"
-          src={aerial}
-          alt="banner"
-        />
-        <div className="absolute vmax-h-screen top-0 left-0 w-full h-full  bg-black/30 z-1" />
+          src={videoBG}
+          autoPlay
+          loop
+        ></video>
+
+        <div className="absolute w-full h-full top-0 left-0 bg-black/30 z-1" />
       </div>
 
       {/* Title Banner */}
-      <div className="absolute inset-0 flex justify-center items-center z-10">
+      <div className="absolute inset-0 flex justify-center items-center">
         <TitleBanner />
       </div>
     </div>

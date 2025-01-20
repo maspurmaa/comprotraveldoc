@@ -1,15 +1,18 @@
 import Banner from "../components/Banner";
 import Navbar from "../components/Navbar";
+import About from "../components/About";
+import ClientListLogo from "../components/ClientListLogo";
 
 export default function Home() {
   return (
-    <div>
-      <div className="relative z-20">
-        <Navbar />
-      </div>
-      <div className="absolute inset-0 z-10">
-        <Banner />
-      </div>
+    <div
+      className="w-screen flex flex-col items-center justify-center 
+    "
+    >
+      <Navbar />
+      <Banner />
+      <About />
+      <ClientListLogo />
     </div>
   );
 }
